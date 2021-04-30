@@ -1,0 +1,97 @@
+ <!-- ======= Miles to Km ======= -->
+
+<h2>Miles to Kilometers</h2>
+<p>Type a value in the Miles field to convert the value to Kilometers:</p>
+
+<p>
+  <label>Miles</label>
+  <input id="inputMiles" type="number" placeholder="Miles" oninput="convertMToKm(this.value)" onchange="convertMToKm(this.value)">
+</p>
+<p>Kilometers: <span id="outputKilometers"></span></p>
+
+          
+          
+                <!-- End Section -->
+          
+          
+               <!-- ======= Km to Miles ======= -->
+
+
+<h2>Kilometers to Miles</h2>
+<p>Type a value in the Kilometers field to convert the value to Miles:</p>
+
+<p>
+  <label>Kilometers</label>
+  <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="convertKmToM(this.value)" onchange="convertKmToM(this.value)">
+</p>
+<p>Miles: <span id="outputMiles"></span></p>
+           <!-- End Section -->
+          <!-- ======= Meters to Feet ======= -->
+<h2>Meters to Feet</h2>
+<p>Type a value in the Meters field to convert the value to Feet:</p>
+<p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="convertMtoF(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Feet: <span id="outputFeet"></span></p>
+           <!-- End Section -->
+           <!-- ======= Feet to Meters ======= -->
+<h2>Feet to Meters</h2>
+<p>Type a value in the Feet field to convert the value to Meters:</p>
+
+<p>
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput=" convertFtoM(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+           <!-- End Section -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+            <!-- End Section -->
+            <!-- ======= Fahenhight to Celcius ======= -->
+<h2>Fahenhight to Celcius</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="convertFToC(this.value)" onchange="convertFToC(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+            <!-- End Section -->
+            <!-- ======= Celcius to Fahenhight ======= -->
+
+<h2>Celcius to Fahenhight</h2>
+<p>Type a value in the Celsius field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="convertCToF(this.value)" onchange="convertCToF(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+            <!-- End Section -->
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function convertFtoM(valNum) {
+      document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+    }   
+    function convertMtoF(valNum) {
+      document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+    }
+    function convertKmToM(valNum) {
+      document.getElementById("outputMiles").innerHTML=valNum*0.62137;
+    } 
+    function convertMToKm(valNum) {
+      document.getElementById("outputKilometers").innerHTML=valNum/0.62137;
+    }
+    function convertFToC(valNum) {
+       alNum = parseFloat(valNum);
+       document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+    }
+    function convertCToF(valNum) {
+       valNum = parseFloat(valNum);
+       document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+    }
+  </script>
